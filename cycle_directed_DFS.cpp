@@ -15,8 +15,9 @@ using namespace std;
                     return true;
                  }
                  else{
-                    if(DFS(adj,visit,path,cur,node))
-                        return true;
+                    if(not visit[cur])
+                        if(DFS(adj,visit,path,cur,node))
+                           return true;
                    
                  }
              }
